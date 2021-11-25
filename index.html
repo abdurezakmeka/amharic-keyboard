@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Memokeria</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto&amp;display=swap'>
+<link rel="stylesheet" href="./css/layout.css">
+<link href="./css/style.css" rel="stylesheet" type="text/css">
+<script src="./js/character.js"></script>
+<script src="./js/clipboard.js"></script>
+<script src="./js/converter.js"></script>
+<script src="./js/script.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+		<div class="content">
+			<header class="app-header">
+				<div class="container">
+					<p id="headertag">Free Amharic Keyboard</p>
+				</div>
+			</header>	
+		</div>
+	
+	
+	<br>
+	<form name="conversion">
+	
+	<textarea name="element" id="bar" onKeyUp="transcrire()" rows="4" class="cadr"></textarea>
+	<br>
+	<br>
+	<div class="delc"> 
+		<br>
+		<input type="button" class="clear" title="clear" onClick="reset();conversion.element.focus()" value="Erase">
+		</div> <br>
+	<input type="button" class="copy" data-clipboard-action="copy" data-clipboard-target="#bar" value="copy">
+	<script>
+	var clipboard = new Clipboard('.copy');
+	clipboard.on('success', function(e) {
+	console.log(e); 
+	});
+	clipboard.on('error', function(e) {
+	console.log(e);
+	});
+	</script>
+	
+	<div class="espc"></div>
+	<div class="boxdeva">
+	</div> 
+	</form>
+	</div>
+	<div class="espb"></div>
+
+
+
+
+
+
+		<footer class="app-footer">
+			<ul>
+				<li>
+					<a href="./index.html"><i class="fa fa-heart"></i></a> 
+					Home
+				</li>
+				<li>
+					<i class="fa fa-barcode"></i>
+					Show Card
+				</li>
+				<li>
+					<i class="fa fa-user"></i>
+					Account
+				</li>
+				<li>
+		
+					<a href="./page.html"><i class="fa fa-map-marker"></i></a> 
+					Find Store
+				</li>
+			</ul>
+		</footer>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
